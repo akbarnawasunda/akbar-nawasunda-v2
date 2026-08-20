@@ -1,0 +1,67 @@
+<section class="section" id="newsletter">
+  <div class="wrap">
+    <h2 class="section-title">Tetap Terhubung</h2>
+    <p class="section-sub">
+      // Update rilis terbaru, behind the scenes, dan exclusive tracks.
+    </p>
+
+    <form class="newsletter" id="newsletterForm">
+      <input
+        type="email"
+        name="email"
+        required
+        placeholder="Email lu"
+        aria-label="Email"
+      />
+      <button class="btn primary" type="submit">SUBSCRIBE</button>
+    </form>
+
+    <p class="form-msg" id="newsletterMsg"></p>
+  </div>
+
+  <script>
+    const form = document.getElementById('newsletterForm');
+    const msg = document.getElementById('newsletterMsg');
+
+    if (form) {
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const input = form.querySelector('input');
+        const btn = form.querySelector('button');
+        const email = input.value.trim();
+
+        if (!email) return;
+
+        btn.disabled = true;
+        msg.textContent = 'NGIRIM...';
+
+        try {
+          const res = await fetch('https://formsubmit.co/ajax/akbarnawasunda@gmail.com', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Accept: 'application/json'
+            },
+            body: JSON.stringify({
+              email,
+              _subject: `[NEWSLETTER] ${email}`,
+              _template: 'table',
+              _captcha: 'false',
+              _honey: ''
+            })
+          });
+
+          if (!res.ok) throw new Error('Newsletter error');
+
+          msg.textContent = 'GAS! LU MASUK LIST.';
+          form.reset();
+        } catch (error) {
+          msg.textContent = 'GAGAL. COBA LAGI.';
+        } finally {
+          btn.disabled = false;
+        }
+      });
+    }
+  </script>
+</section>

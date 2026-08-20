@@ -1,0 +1,64 @@
+---
+import releases from '../data/releases.json';
+
+function artStyle(art: string) {
+  if (!art) return '';
+  return `background-image:url('${art.replace(/^http:/, 'https:')}')`;
+}
+---
+
+<section class="section" id="releases">
+  <div class="wrap">
+    <h2 class="section-title">Rilis</h2>
+    <p class="section-sub">
+      // Originals sebagai Akbar Nawasunda, remix sebagai DJ Akbar Remix.
+    </p>
+
+    <div class="release-tabs">
+      <button type="button" class="active" data-tab="originals">ORIGINALS</button>
+      <button type="button" data-tab="remixes">REMIXES</button>
+    </div>
+
+    <div class="release-grid">
+      {releases.releases.map((release) => (
+        <a
+          class="rel-card"
+          href={release.link || release.soundcloud || '#'}
+          target="_blank"
+          rel="noopener"
+          data-cat={release.cat}
+        >
+          <div class="rel-thumb" style={artStyle(release.art)}></div>
+
+          <div class="rel-meta">
+            <span>{release.date}</span>
+            <span>{release.type}</span>
+          </div>
+
+          <h3>{release.title}</h3>
+          <span class="rel-type">{release.cat.toUpperCase()}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <script>
+    const tabs = Array.from(document.querySelectorAll('.release-tabs button'));
+    const cards = Array.from(document.querySelectorAll('.rel-card'));
+
+    function applyFilter(tab) {
+      cards.forEach((card) => {
+        card.style.display = card.dataset.cat === tab ? '' : 'none';
+      });
+    }
+
+    tabs.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        tabs.forEach((x) => x.classList.toggle('active', x === btn));
+        applyFilter(btn.dataset.tab || 'originals');
+      });
+    });
+
+    applyFilter('originals');
+  </script>
+</section>

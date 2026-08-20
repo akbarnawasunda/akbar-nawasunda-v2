@@ -1,0 +1,127 @@
+{
+  "artist": {
+    "name": "Akbar Nawasunda",
+    "aka": "DJ Akbar Remix",
+    "badge": "OPEN UNTUK KOLABORASI & REQUEST REMIX",
+    "tagline": "// PRODUSER MUSIK ELEKTRONIK & REMIXER — INDONESIA",
+    "location": "Bandung Barat, Indonesia",
+    "email": "akbarnawasunda@gmail.com",
+    "genres": [
+      "Breakbeat",
+      "Indo Bass",
+      "Jedag Jedug",
+      "Jungle Dutch",
+      "Kendang Chops"
+    ]
+  },
+  "stats": [
+    {
+      "label": "TOTAL FOLLOWERS",
+      "value": "5.875+"
+    },
+    {
+      "label": "YOUTUBE VIEWS",
+      "value": "1.776.785+"
+    },
+    {
+      "label": "PLATFORMS",
+      "value": "23+"
+    },
+    {
+      "label": "TRACKS",
+      "value": "90+"
+    }
+  ],
+  "bio": {
+    "short": "Produser & remixer asal Bandung Barat. Mulai 2020 sebagai DJ Akbar Remix, kini rilis orisinal sebagai Akbar Nawasunda di Spotify, Apple Music, Amazon Music, dan Deezer.",
+    "long": "Perjalanan musik Akbar Nawasunda dimulai tahun 2020 sebagai bedroom producer independen dengan nama DJ Akbar Remix. Eksperimennya meremix lagu-lagu populer ke genre Breakbeat, Jedag Jedug, dan Jungle Dutch meraih jutaan pemutaran di YouTube & TikTok. Kini, di bawah nama Akbar Nawasunda, ia merilis karya-karya orisinal yang menggabungkan melodi pop dan electronic bass ke platform musik digital global."
+  },
+  "socials": {
+    "spotify": "https://open.spotify.com/intl-id/artist/7KOQuIQLuxyklLox0RDMMw",
+    "apple": "https://music.apple.com/id/album/masih-dihatiku-single/1816312737",
+    "youtube": "https://www.youtube.com/@akbarnawasunda",
+    "soundcloud": "https://soundcloud.com/akbarnawasunda",
+    "deezer": "https://www.deezer.com/us/artist/322209491",
+    "amazon": "https://music.amazon.com/albums/B0G4GBYQKJ",
+    "tidal": "https://tidal.com/track/443331782",
+    "instagram": "https://www.instagram.com/akbarnawasunda/",
+    "tiktok": "https://www.tiktok.com/@akbarnawasunda",
+    "x": "https://x.com/akbarnawasunda",
+    "email": "mailto:akbarnawasunda@gmail.com"
+  },
+  "platforms": [
+    {
+      "name": "Spotify",
+      "sub": "Akbar Nawasunda",
+      "url": "https://open.spotify.com/intl-id/artist/7KOQuIQLuxyklLox0RDMMw",
+      "color": "#1DB954"
+    },
+    {
+      "name": "Apple Music",
+      "sub": "Listen",
+      "url": "https://music.apple.com/id/album/masih-dihatiku-single/1816312737",
+      "color": "#FA57C1"
+    },
+    {
+      "name": "YouTube",
+      "sub": "5.73K subs",
+      "url": "https://www.youtube.com/@akbarnawasunda",
+      "color": "#FF0000"
+    },
+    {
+      "name": "SoundCloud",
+      "sub": "DJ Akbar Remix",
+      "url": "https://soundcloud.com/akbarnawasunda",
+      "color": "#FF5500"
+    },
+    {
+      "name": "Deezer",
+      "sub": "Listen",
+      "url": "https://www.deezer.com/us/artist/322209491",
+      "color": "#A238FF"
+    },
+    {
+      "name": "Amazon",
+      "sub": "Music",
+      "url": "https://music.amazon.com/albums/B0G4GBYQKJ",
+      "color": "#FF9900"
+    },
+    {
+      "name": "Tidal",
+      "sub": "Listen",
+      "url": "https://tidal.com/track/443331782",
+      "color": "#00FFFF"
+    },
+    {
+      "name": "Instagram",
+      "sub": "@akbarnawasunda",
+      "url": "https://www.instagram.com/akbarnawasunda/",
+      "color": "#d62976"
+    },
+    {
+      "name": "TikTok",
+      "sub": "@akbarnawasunda",
+      "url": "https://www.tiktok.com/@akbarnawasunda",
+      "color": "#25F4EE"
+    },
+    {
+      "name": "X",
+      "sub": "Twitter",
+      "url": "https://x.com/akbarnawasunda",
+      "color": "#ffffff"
+    },
+    {
+      "name": "Email",
+      "sub": "Reply < 24h",
+      "url": "mailto:akbarnawasunda@gmail.com",
+      "color": "#ffc857"
+    }
+  ],
+  "footer": {
+    "year": "2026",
+    "status": "SYSTEM ONLINE",
+    "city": "BANDUNG BARAT",
+    "timezone": "UTC+7",
+    "maps": "https://maps.app.goo.gl/SEEeg6ZWeyugHuSM6"
+  }
+}

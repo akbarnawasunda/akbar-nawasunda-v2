@@ -1,0 +1,17 @@
+{
+  "name": "Akbar Nawasunda",
+  "short_name": "AKBAR",
+  "description": "Official website of Akbar Nawasunda aka DJ Akbar Remix.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d0221",
+  "theme_color": "#0d0221",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

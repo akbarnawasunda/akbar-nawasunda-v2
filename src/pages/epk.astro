@@ -1,0 +1,56 @@
+---
+import Base from '../layouts/Base.astro';
+import content from '../data/content.json';
+---
+
+<Base
+  title="Akbar Nawasunda — EPK / Press Kit"
+  description="Electronic Press Kit of Akbar Nawasunda aka DJ Akbar Remix."
+>
+  <section class="epk-hero">
+    <div class="wrap">
+      <p class="epk-label">ELECTRONIC PRESS KIT — 2026</p>
+
+      <h1 class="section-title">AKBAR NAWASUNDA</h1>
+      <p class="section-sub">
+        aka {content.artist.aka} — {content.artist.location} (UTC+7)
+      </p>
+
+      <div class="stats">
+        {content.stats.map((stat) => (
+          <div class="stat">
+            <b>{stat.value}</b>
+            <span>{stat.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap panel-grid">
+      <article class="panel">
+        <h2>BIO</h2>
+        <p>{content.bio.long}</p>
+      </article>
+
+      <article class="panel">
+        <h2>GENRES & STYLE</h2>
+        <ul>
+          {content.artist.genres.map((genre) => <li>{genre}</li>)}
+        </ul>
+      </article>
+
+      <article class="panel">
+        <h2>BOOKING & CONTACT</h2>
+        <p>
+          Remix requests, custom arrangements, collabs & licensing:
+          <a href={`mailto:${content.artist.email}`}>{content.artist.email}</a>
+        </p>
+        <p style="margin-top:12px">
+          <a class="btn primary" href="/#collab">WORK WITH ME</a>
+        </p>
+      </article>
+    </div>
+  </section>
+</Base>

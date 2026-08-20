@@ -1,0 +1,101 @@
+<section class="section" id="collab">
+  <div class="wrap">
+    <h2 class="section-title">Kerja Sama</h2>
+    <p class="section-sub">
+      // Butuh remix? Aransemen custom? Kolaborasi? Yuk ngobrol.
+    </p>
+
+    <form class="form" id="collabForm">
+      <div class="form-row">
+        <label>
+          NAMA KAMU *
+          <input name="name" type="text" required placeholder="Nama" />
+        </label>
+
+        <label>
+          EMAIL *
+          <input name="email" type="email" required placeholder="email@domain.com" />
+        </label>
+      </div>
+
+      <div class="form-row">
+        <label>
+          TIPE PROJECT *
+          <select name="type" required>
+            <option value="">-- Pilih --</option>
+            <option>Request Remix</option>
+            <option>Aransemen Custom</option>
+            <option>Kolaborasi</option>
+            <option>Pertanyaan Lisensi</option>
+            <option>Lainnya</option>
+          </select>
+        </label>
+
+        <label>
+          LINK LAGU
+          <input name="song" type="url" placeholder="YouTube / Spotify / SoundCloud" />
+        </label>
+      </div>
+
+      <label>
+        GENRE YANG DIMAU
+        <input name="genre" type="text" placeholder="Breakbeat, Jedag Jedug, Jungle Dutch..." />
+      </label>
+
+      <label>
+        PESAN *
+        <textarea name="message" required placeholder="Ceritain kebutuhan lu..."></textarea>
+      </label>
+
+      <div>
+        <button class="btn primary" type="submit">KIRIM REQUEST</button>
+      </div>
+
+      <p class="form-msg" id="collabMsg"></p>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('collabForm');
+    const msg = document.getElementById('collabMsg');
+
+    if (form) {
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const btn = form.querySelector('button[type="submit"]');
+        const originalText = btn.textContent;
+
+        const data = Object.fromEntries(new FormData(form));
+        data._subject = `[COLLAB REQUEST] ${data.type || 'Unknown'} - ${data.name || 'No name'}`;
+        data._template = 'table';
+        data._captcha = 'false';
+
+        btn.disabled = true;
+        btn.textContent = 'NGIRIM...';
+        msg.textContent = '';
+
+        try {
+          const res = await fetch('https://formsubmit.co/ajax/akbarnawasunda@gmail.com', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Accept: 'application/json'
+            },
+            body: JSON.stringify(data)
+          });
+
+          if (!res.ok) throw new Error('FormSubmit error');
+
+          msg.textContent = 'TERKIRIM! GUE BALES < 24 JAM.';
+          form.reset();
+        } catch (error) {
+          msg.textContent = 'GAGAL NGIRIM. COBA LAGI ATAU EMAIL LANGSUNG.';
+        } finally {
+          btn.disabled = false;
+          btn.textContent = originalText;
+        }
+      });
+    }
+  </script>
+</section>

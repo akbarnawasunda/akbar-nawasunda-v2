@@ -1,1 +1,0 @@
-# akbar-nawasunda-v2

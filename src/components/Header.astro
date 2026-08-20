@@ -1,0 +1,21 @@
+---
+const nav = [
+  { href: '#releases', label: 'RILIS' },
+  { href: '#platforms', label: 'PLATFORMS' },
+  { href: '#about', label: 'TENTANG' },
+  { href: '/epk/', label: 'EPK' },
+  { href: '#collab', label: 'WORK WITH ME' }
+];
+---
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="/">
+      AKBAR<span>NAWASUNDA</span>
+    </a>
+
+    <nav class="nav" aria-label="Main navigation">
+      {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+  </div>
+</header>

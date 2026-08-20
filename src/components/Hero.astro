@@ -1,0 +1,29 @@
+---
+import content from '../data/content.json';
+---
+
+<section class="hero" id="hero">
+  <div class="wrap">
+    <p class="badge">{content.artist.badge}</p>
+
+    <h1>
+      <span class="outline">AKBAR</span><br />
+      <span class="fill">NAWASUNDA</span>
+    </h1>
+
+    <p class="tagline">{content.artist.tagline}</p>
+    <p class="aka">aka <b>{content.artist.aka}</b></p>
+
+    <div class="cta-row">
+      <a class="btn primary" href={content.socials.spotify} target="_blank" rel="noopener">
+        DENGARKAN DI SPOTIFY
+      </a>
+      <a class="btn secondary" href="#collab">
+        KERJA SAMA
+      </a>
+      <a class="btn" href="#releases">
+        RILIS TERBARU
+      </a>
+    </div>
+  </div>
+</section>

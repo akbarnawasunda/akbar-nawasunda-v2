@@ -1,0 +1,20 @@
+---
+import content from '../data/content.json';
+---
+
+<section class="section" id="about">
+  <div class="wrap">
+    <h2 class="section-title">Tentang</h2>
+    <p class="section-sub">// Cerita singkat di balik nama.</p>
+
+    <div class="about-box">
+      <p>{content.bio.long}</p>
+
+      <div class="genre-list">
+        {content.artist.genres.map((genre) => (
+          <span class="genre">{genre}</span>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

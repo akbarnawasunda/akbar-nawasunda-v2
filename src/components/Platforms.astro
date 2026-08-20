@@ -1,0 +1,26 @@
+---
+import content from '../data/content.json';
+---
+
+<section class="section" id="platforms">
+  <div class="wrap">
+    <h2 class="section-title">Platforms</h2>
+    <p class="section-sub">// Semua channel resmi.</p>
+
+    <div class="platform-grid">
+      {content.platforms.map((platform) => (
+        <a
+          class="plat"
+          href={platform.url}
+          target={platform.url.startsWith('mailto:') ? undefined : '_blank'}
+          rel="noopener"
+          style={`--c:${platform.color}`}
+        >
+          <i></i>
+          <b>{platform.name}</b>
+          <span>{platform.sub}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
